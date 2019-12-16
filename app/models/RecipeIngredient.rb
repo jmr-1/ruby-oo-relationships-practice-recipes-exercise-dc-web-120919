@@ -14,8 +14,6 @@ class RecipeIngredient
         return @@all
     end 
 
-
-
     #RecipeIngredient accessors already include #ingredient and #recipe
     #However, can use #ingredient with additional logic to also show
     #users who have an allergic reaction to this specific ingredient

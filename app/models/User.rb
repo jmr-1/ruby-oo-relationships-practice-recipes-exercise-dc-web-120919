@@ -36,6 +36,8 @@ class User
         return Allergy.all.select {|allergy| allergy.user == self}
     end 
 
+    
+
     def top_three_recipes
 
         sorted_array = self.recipes.sort_by {|recipe|recipe.rating}.reverse 

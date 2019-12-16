@@ -15,5 +15,10 @@ class RecipeCard
         return @@all
     end
 
+    def search_by_ingredient 
+        
+
+    end 
+
 
 end 
