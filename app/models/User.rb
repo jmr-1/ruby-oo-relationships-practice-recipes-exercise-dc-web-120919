@@ -38,7 +38,8 @@ class User
 
     def top_three_recipes
 
-        return self.recipes.max(3) #returns top 3 recipes using self.recipes
+        sorted_array = self.recipes.sort_by {|recipe|recipe.rating}.reverse 
+        return sorted_array[0..2]
     end 
 
     def most_recent_recipe
@@ -50,9 +51,11 @@ class User
 
     end 
 
+
+
     def safe_recipes
 
-        
+
     end 
 
 end 

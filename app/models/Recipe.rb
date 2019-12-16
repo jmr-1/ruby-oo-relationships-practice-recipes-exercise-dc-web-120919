@@ -16,6 +16,7 @@ class Recipe
 
        #bug: when this selects and goes through, it goes to the recipes and returns any associated
        #with the same user, which might include other recipes as well
+       #bug fix: forgot the = 
     #    RecipeIngredient.all.select{|meal|meal.recipe = self}
 
     #    RecipeIngredient.all.each do |meal|
@@ -24,5 +25,15 @@ class Recipe
     #     end 
     #    end 
     end 
+
+    def self.most_popular 
+
+        #most_pop = RecipeCard.all.map {|recipe_card|recipe_card.recipe} later needs .mode
+        most_pop = RecipeCard.all.each do |recipe_card|
+
+            puts recipe_card.recipe
+        end 
+    end 
+
 
 end 

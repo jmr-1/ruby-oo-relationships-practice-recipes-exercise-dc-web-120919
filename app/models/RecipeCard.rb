@@ -4,7 +4,7 @@ class RecipeCard
 
     @@all = []
 
-    def initialize(user, recipe, date=Time.now, rating)
+    def initialize(user, recipe, rating, date=Time.now)
 
         @user, @recipe, @date, @rating = user, recipe, date, rating 
         @@all << self 

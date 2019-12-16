@@ -41,9 +41,10 @@ d3 = RecipeIngredient.new(lemon, tea)
 
 
 
-new_recipe = RecipeCard.new(j_l, chocolate_cake, "7.5")
-newest_recipe = RecipeCard.new(mansour, choc_cake2, "9")
-even_newer_recipe = RecipeCard.new(mansour, lemonade, "8")
+new_recipe = RecipeCard.new(j_l, chocolate_cake, 7.5)
+newest_recipe = RecipeCard.new(mansour, choc_cake2, 9)
+even_newer_recipe = RecipeCard.new(mansour, lemonade, 8)
+new_recipe2 = RecipeCard.new(mansour, chocolate_cake, 10)
 
 #hoc_card = 
 #make this ref objects later 
@@ -52,11 +53,14 @@ puts "tests follow"
 puts chocolate_cake.user.name == "John-Louis" 
 puts new_recipe.recipe.user.name == "John-Louis"
 
-#puts a.ingredient.name == "chocolate"
+puts "***tests ingredients"
+puts a.ingredient.name == "chocolate"
+puts tea.ingredients == [tea_bag, red_pepper, lemon]
 
 puts mansour.most_recent_recipe == even_newer_recipe 
 puts "allergens tests"
 puts mansour.allergens.select {|allergens| allergens.ingredient == red_pepper }
 
+puts Recipe.most_popular == chocolate_cake 
 
 binding.pry 
